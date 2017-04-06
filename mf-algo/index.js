@@ -3,7 +3,7 @@ const PACKET_SIZE_HEADER = 2;
 process.stdin.on('data', (chunk) => {
   var tmpString = Buffer.from(chunk).slice(PACKET_SIZE_HEADER, chunk.length).toString();
 
-  var tmpString = tmpString + " from node";
+  tmpString = tmpString + " from node";
 
   const buf1 = Buffer.from(tmpString);
 

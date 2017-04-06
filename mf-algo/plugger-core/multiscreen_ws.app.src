@@ -1,0 +1,16 @@
+{application, multiscreen_ws,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  cowboy,
+		              crypto,
+                  ssl,
+                  jsone
+                 ]},
+  {mod, { multiscreen_ws_app, []}},
+  {env, []}
+ ]}.
