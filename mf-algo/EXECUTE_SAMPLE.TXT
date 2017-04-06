@@ -1,8 +1,4 @@
-Step 1. Compile the C code:
-
-unix> gcc -o extprg complex.c erl_comm.c port.c
-
-Step 2. Start Erlang and compile the Erlang code:
+Step 1 - Start Erlang and compile the Erlang code:
 
 unix> erl
 Erlang (BEAM) emulator version 4.9.1.2
@@ -11,13 +7,14 @@ Eshell V4.9.1.2 (abort with ^G)
 1> c(complex1).
 {ok,complex1}
 
-Step 3. Run the example:
+Step 2 - Run the example:
 
-2> complex1:start("extprg").
+2> complex1:start("node index.js").
 <0.34.0>
-3> complex1:foo(3).
-4
-4> complex1:bar(5).
-10
+3> complex1:foo().
+"foo from node".
+4> complex1:bar().
+"bar from node".
 5> complex1:stop().
 stop
+
