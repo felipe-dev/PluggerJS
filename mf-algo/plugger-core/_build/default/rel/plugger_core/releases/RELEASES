@@ -1,0 +1,6 @@
+[{release,"plugger_core","0.1.0","8.3",
+          [{kernel,"5.2","./lib/kernel-5.2"},
+           {stdlib,"3.3","./lib/stdlib-3.3"},
+           {plugger_core,"0.1.0","./lib/plugger_core-0.1.0"},
+           {sasl,"3.0.3","./lib/sasl-3.0.3"}],
+          permanent}].

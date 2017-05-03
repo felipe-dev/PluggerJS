@@ -1,0 +1,12 @@
+{application,plugger_core,
+             [{description,"An OTP application"},
+              {vsn,"0.1.0"},
+              {registered,[]},
+              {mod,{plugger_core_app,[]}},
+              {applications,[kernel,stdlib]},
+              {env,[]},
+              {modules,[plugger_core_app,plugger_core_sup,service_session,
+                        yellow_pages]},
+              {maintainers,[]},
+              {licenses,[]},
+              {links,[]}]}.

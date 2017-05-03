@@ -1,0 +1,504 @@
+
+=====
+===== LOGGING STARTED Thu Apr  6 19:40:19 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=PROGRESS REPORT==== 6-Apr-2017::19:40:19 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.220.0>},
+                       {id,alarm_handler},
+                       {mfargs,{alarm_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 6-Apr-2017::19:40:19 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.219.0>},
+                       {id,sasl_safe_sup},
+                       {mfargs,
+                           {supervisor,start_link,
+                               [{local,sasl_safe_sup},sasl,safe]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 6-Apr-2017::19:40:19 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.221.0>},
+                       {id,release_handler},
+                       {mfargs,{release_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 6-Apr-2017::19:40:19 ===
+         application: sasl
+          started_at: 'plugger_core@pluggerjs-VirtualBox'
+Eshell V8.3  (abort with ^G)
+(plugger_core@pluggerjs-VirtualBox)1> 
+=====
+===== LOGGING STARTED Thu Apr  6 20:15:05 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:15:05 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {{badmatch,<0.215.0>},
+                      [{yellow_pages,create_service,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"},
+                            {line,40}]},
+                       {plugger_core_app,start,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                            {line,19}]},
+                       {application_master,start_it_old,4,
+                           [{file,"application_master.erl"},{line,273}]}]}}}}
+    type: permanent
+sh: 1: exec: mod1.js: not found
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:16:13 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:16:13 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {{badmatch,<0.215.0>},
+                      [{yellow_pages,create_service,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"},
+                            {line,40}]},
+                       {plugger_core_app,start,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                            {line,19}]},
+                       {application_master,start_it_old,4,
+                           [{file,"application_master.erl"},{line,273}]}]}}}}
+    type: permanent
+sh: 1: exec: mod1.js: not found
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:16:50 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:16:50 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {{badmatch,<0.215.0>},
+                      [{yellow_pages,create_service,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"},
+                            {line,40}]},
+                       {plugger_core_app,start,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                            {line,19}]},
+                       {application_master,start_it_old,4,
+                           [{file,"application_master.erl"},{line,273}]}]}}}}
+    type: permanent
+sh: 1: exec: mod1.js: not found
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:20:42 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:20:43 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {badarg,
+                         [{io,format,
+                              [<0.213.0>,"NodeModulePath: ~s ~n",
+                               <<"mod1.js">>],
+                              []},
+                          {yellow_pages,create_service,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"}, 
+                               {line,40}]},
+                          {plugger_core_app,start,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                               {line,19}]},
+                          {application_master,start_it_old,4,
+                              [{file,"application_master.erl"},
+                               {line,273}]}]}}}}
+    type: permanent
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,\"NodeModulePath: ~s ~n\",<<\"mod1.js\">>],[]},{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,"NodeModulePath: ~s ~n"
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:24:09 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:24:10 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {badarg,
+                         [{io,format,
+                              [<0.213.0>,"NodeModulePath: ~s ~n",
+                               <<"mod1.js">>],
+                              []},
+                          {yellow_pages,create_service,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"}, 
+                               {line,40}]},
+                          {plugger_core_app,start,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                               {line,19}]},
+                          {application_master,start_it_old,4,
+                              [{file,"application_master.erl"},
+                               {line,273}]}]}}}}
+    type: permanent
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,\"NodeModulePath: ~s ~n\",<<\"mod1.js\">>],[]},{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,"NodeModulePath: ~s ~n"
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:24:22 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:24:22 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {badarg,
+                         [{io,format,
+                              [<0.213.0>,"NodeModulePath: ~s ~n",
+                               <<"mod1.js">>],
+                              []},
+                          {yellow_pages,create_service,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"}, 
+                               {line,40}]},
+                          {plugger_core_app,start,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                               {line,19}]},
+                          {application_master,start_it_old,4,
+                              [{file,"application_master.erl"},
+                               {line,273}]}]}}}}
+    type: permanent
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,\"NodeModulePath: ~s ~n\",<<\"mod1.js\">>],[]},{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,"NodeModulePath: ~s ~n"
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:24:52 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:24:53 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {badarg,
+                         [{io,format,
+                              [<0.213.0>,"NodeModulePath: ~s ~n",
+                               <<"mod1.js">>],
+                              []},
+                          {yellow_pages,create_service,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"}, 
+                               {line,40}]},
+                          {plugger_core_app,start,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                               {line,19}]},
+                          {application_master,start_it_old,4,
+                              [{file,"application_master.erl"},
+                               {line,273}]}]}}}}
+    type: permanent
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,\"NodeModulePath: ~s ~n\",<<\"mod1.js\">>],[]},{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,"NodeModulePath: ~s ~n"
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:25:47 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:25:47 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {badarg,
+                         [{io,format,
+                              [<0.213.0>,"NodeModulePath: ~s ~n","mod1.js"],
+                              []},
+                          {yellow_pages,create_service,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"}, 
+                               {line,40}]},
+                          {plugger_core_app,start,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                               {line,19}]},
+                          {application_master,start_it_old,4,
+                              [{file,"application_master.erl"},
+                               {line,273}]}]}}}}
+    type: permanent
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,\"NodeModulePath: ~s ~n\",\"mod1.js\"],[]},{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,"NodeModulePath: ~s ~n"
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:28:52 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+
+=INFO REPORT==== 6-Apr-2017::20:28:53 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {badarg,
+                         [{io,format,
+                              [<0.213.0>,"NodeModulePath: ~w ~n","mod1.js"],
+                              []},
+                          {yellow_pages,create_service,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"}, 
+                               {line,40}]},
+                          {plugger_core_app,start,2,
+                              [{file,
+                                   "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                               {line,19}]},
+                          {application_master,start_it_old,4,
+                              [{file,"application_master.erl"},
+                               {line,273}]}]}}}}
+    type: permanent
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,\"NodeModulePath: ~w ~n\",\"mod1.js\"],[]},{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,40}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{badarg,[{io,format,[<0.213.0>,"NodeModulePath: ~w ~n"
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:32:29 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+NodeModulePath: mod1.js 
+
+=INFO REPORT==== 6-Apr-2017::20:32:29 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {{badmatch,<0.215.0>},
+                      [{yellow_pages,create_service,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"},
+                            {line,41}]},
+                       {plugger_core_app,start,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                            {line,19}]},
+                       {application_master,start_it_old,4,
+                           [{file,"application_master.erl"},{line,273}]}]}}}}
+    type: permanent
+sh: 1: exec: mod1.js: not found
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,41}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:34:13 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+NodeModulePath: mod1.js 
+
+=INFO REPORT==== 6-Apr-2017::20:34:14 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {{badmatch,<0.215.0>},
+                      [{yellow_pages,create_service,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"},
+                            {line,41}]},
+                       {plugger_core_app,start,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                            {line,19}]},
+                       {application_master,start_it_old,4,
+                           [{file,"application_master.erl"},{line,273}]}]}}}}
+    type: permanent
+module.js:471
+    throw err;
+    ^
+
+Error: Cannot find module '/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/mod1.js'
+    at Function.Module._resolveFilename (module.js:469:15)
+    at Function.Module._load (module.js:417:25)
+    at Module.runMain (module.js:604:10)
+    at run (bootstrap_node.js:393:7)
+    at startup (bootstrap_node.js:150:9)
+    at bootstrap_node.js:508:3
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,41}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:35:17 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+NodeModulePath: mod1.js 
+
+=INFO REPORT==== 6-Apr-2017::20:35:18 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {{badmatch,<0.215.0>},
+                      [{yellow_pages,create_service,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"},
+                            {line,41}]},
+                       {plugger_core_app,start,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                            {line,19}]},
+                       {application_master,start_it_old,4,
+                           [{file,"application_master.erl"},{line,273}]}]}}}}
+    type: permanent
+module.js:471
+    throw err;
+    ^
+
+Error: Cannot find module '/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/mod1.js'
+    at Function.Module._resolveFilename (module.js:469:15)
+    at Function.Module._load (module.js:417:25)
+    at Module.runMain (module.js:604:10)
+    at run (bootstrap_node.js:393:7)
+    at startup (bootstrap_node.js:150:9)
+    at bootstrap_node.js:508:3
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,41}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,
+
+Crash dump is being written to: erl_crash.dump...done
+
+=====
+===== LOGGING STARTED Thu Apr  6 20:36:30 BRT 2017
+=====
+Exec: /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/erts-8.3/bin/erlexec -boot /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/plugger_core -mode embedded -boot_var ERTS_LIB_DIR /home/pluggerjs/.evm/erlang_versions/otp_src_19.3/lib/erlang/lib -config /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/sys.config -args_file /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core/releases/0.1.0/vm.args -pa -- console
+Root: /home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/rel/plugger_core
+Erlang/OTP 19 [erts-8.3] [source] [64-bit] [async-threads:30] [kernel-poll:true] 
+
+NodeModulePath: mod1.js 
+
+=INFO REPORT==== 6-Apr-2017::20:36:31 ===
+    application: plugger_core
+    exited: {bad_return,
+                {{plugger_core_app,start,[normal,[]]},
+                 {'EXIT',
+                     {{badmatch,<0.215.0>},
+                      [{yellow_pages,create_service,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl"},
+                            {line,41}]},
+                       {plugger_core_app,start,2,
+                           [{file,
+                                "/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl"},
+                            {line,19}]},
+                       {application_master,start_it_old,4,
+                           [{file,"application_master.erl"},{line,273}]}]}}}}
+    type: permanent
+{"Kernel pid terminated",application_controller,"{application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/yellow_pages.erl\"},{line,41}]},{plugger_core_app,start,2,[{file,\"/home/pluggerjs/Projetos/pluggerjs/mf-algo/plugger-core/plugger_core/_build/default/lib/plugger_core/src/plugger_core_app.erl\"},{line,19}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,plugger_core,{bad_return,{{plugger_core_app,start,[normal,[]]},{'EXIT',{{badmatch,<0.215.0>},[{yellow_pages,create_service,2,
+
+Crash dump is being written to: erl_crash.dump...done
