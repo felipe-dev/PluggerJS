@@ -52,7 +52,7 @@ class PServer {
             message = JSON.parse(message.toString('utf8'));
 
             var service = self._services[message.fn.split('.')[0]];
-
+            console.log(message.fn.split('.')[0],'listening:',!!service)
             if (service)
               service.send(JSON.stringify({fn: message.fn.split('.')[1], value: message.value, identity: identity}));
         });
@@ -65,17 +65,31 @@ class PServer {
     if (!this._services[body.name]) {
       var reply = zmq.socket("rep");
 
-      console.log('discovered:', body.name, body.port)
-      this._services[body.name] = reply.connect(body.port);
+      console.log('discovered:', body.name, body.port);
+
+      this._services[body.name] = reply;
+      reply.connect(body.port);
 
       this._services[body.name].on('message', (r) => {
-        if (r.toString() != 'WAIT') {
-          var res = JSON.parse(r.toString('utf8'));
+        var res = JSON.parse(r.toString('utf8'));
 
+        if (res != 'LISTENING') {
+          console.log(res, typeof(res))
           this._connections[res.identity].send(res.result);
+          // TODO remove pending requests?
           this._connections[res.identity].close();
         }
       });
+
+      var self = this;
+
+      reply.on('close', function () {
+        console.log('closed:', body.name, body.port);
+        reply.close();
+        delete self._services[body.name];
+      })
+
+      reply.monitor(10, 0);
 
       console.log('work: %s', msg.toString(), body.name);
     }
