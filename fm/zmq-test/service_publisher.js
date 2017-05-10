@@ -43,6 +43,7 @@ function logToConsole (message) {
 
 function sendMessage (message) {
     logToConsole("Sending: " + message);
+    console.log(message)
     socket.send(message);
 }
 
@@ -56,7 +57,8 @@ socket.on("message", function (message) {
     // Convert the message into a string and log to the console.
     logToConsole("Response: " + message.toString("utf8") + 'ok');
     message = JSON.parse(message.toString("utf8"));
-    sendMessage(fn[message.fn](message.value))
+    console.log(message)
+    sendMessage(JSON.stringify({result: fn[message.fn](message.value), identity: message.identity}))
 });
 
 // Begin listening for connections on all IP addresses on port 9998.

@@ -42,7 +42,7 @@ random_port({from: 20000}, (rnd) => {
           logToConsole("Server listening on port 9998");
 
           // Increment the counter and send the value to the clients every second.
-          setInterval(function () { sendMessage(JSON.stringify({fn: "hello.dobra", value: 1024})) }, 1000);
+          setInterval(function () { sendMessage(JSON.stringify({fn: "hello.dobra", value: 7})) }, 1000);
       }
   });
 });
