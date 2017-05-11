@@ -33,6 +33,7 @@ function dobra(a) {
 
 // req_s.js
 
+var zmq = require('zmq');
 var socket = zmq.socket("req");
 var counter = 0;
 

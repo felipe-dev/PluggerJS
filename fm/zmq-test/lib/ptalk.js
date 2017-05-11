@@ -32,9 +32,9 @@ class PTalk {
   _onMessage (msg) {
     console.log('_onMessage', msg)
     msg = JSON.parse(msg.toString('utf8'));
-    console.log( msg.identity)
+    console.log(JSON.stringify(msg))
 
-    this._sendMessage({result: this._fcall(msg.fn, msg.value), identity: msg.identity});
+    this._sendMessage({result: this._fcall(msg.fn, msg.value), identity: msg.identity, options: msg.options});
   }
 }
 

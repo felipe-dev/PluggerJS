@@ -10,7 +10,6 @@ class PServer {
     this._init = false;
 
     this._servicesSocket = zmq.socket('sub');
-    this._replySocket = zmq.socket("rep");
 
     this._servicesSocket.bindSync(address);
     this._servicesSocket.subscribe('service_notification');
@@ -36,6 +35,8 @@ class PServer {
     this._listenSock.on('message', (addr) => {
         self._init = true;
 
+        console.log('message', addr.toString())
+
         // Connect to the server instance.
         var replySocket = zmq.socket("rep");
 
@@ -43,7 +44,7 @@ class PServer {
         self._connections[identity] = replySocket;
 
         replySocket.connect(addr.toString(), () => {
-          console.log('ok')
+          console.log('client:', identity);
         });
 
         // Add a callback for the event that is invoked when we receive a message.
@@ -52,9 +53,10 @@ class PServer {
             message = JSON.parse(message.toString('utf8'));
 
             var service = self._services[message.fn.split('.')[0]];
-            console.log(message.fn.split('.')[0],'listening:',!!service)
+            console.log(message.fn.split('.')[0],'listening:',!!service, JSON.stringify(message))
             if (service)
-              service.send(JSON.stringify({fn: message.fn.split('.')[1], value: message.value, identity: identity}));
+              service.send(JSON.stringify({fn: message.fn.split('.')[1], value: message.value,
+                identity: identity, options: message.options}));
         });
     });
   }
@@ -75,7 +77,8 @@ class PServer {
 
         if (res != 'LISTENING') {
           console.log(res, typeof(res))
-          this._connections[res.identity].send(res.result);
+          console.log(JSON.stringify(res));
+          this._connections[res.identity].send(JSON.stringify({result: res.result, options: res.options}));
           // TODO remove pending requests?
           this._connections[res.identity].close();
         }
