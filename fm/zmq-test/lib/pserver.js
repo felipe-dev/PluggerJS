@@ -90,7 +90,7 @@ class PServer {
         console.log('closed:', body.name, body.port);
         reply.close();
         delete self._services[body.name];
-      })
+      });
 
       reply.monitor(10, 0);
 

@@ -3,10 +3,14 @@ var zmq = require('zmq');
 
 class PTalk {
   constructor (addr, fcall) {
-    this._sock = zmq.socket('req');
-    this._bindSock(addr);
-    // TODO change to event?
+    this._address = addr;
     this._fcall = fcall;
+    this._initialize();
+  }
+
+  _initialize () {
+    this._sock = zmq.socket('req');
+    this._bindSock(this._address);
   }
 
   _bindSock(addr) {
@@ -19,7 +23,15 @@ class PTalk {
       } else {
         console.log("Running in", addr);
         self._sendMessage('LISTENING');
+        self._sock.monitor(500, 0);
       }
+    });
+
+    // TODO try connect?
+    this._sock.on('disconnect', function () {
+      console.log('closed')
+      self._sock.close();
+      self._initialize();
     });
 
     this._sock.on('message', this._onMessage.bind(this));

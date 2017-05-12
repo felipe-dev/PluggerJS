@@ -1,12 +1,31 @@
 var zmq = require('zmq');
 
 class PPublish {
-  constructor (properties, server) {
+  constructor (properties, serverAddress) {
     this._properties = Buffer.from(JSON.stringify(properties), 'utf8');
+    this._serverAddress = serverAddress;
+    this._initialize();
+
+    this._connect();
+  }
+
+  _connect () {
+    this._sock.connect(this._serverAddress);
+  }
+
+  _initialize () {
+    var self = this;
 
     this._sock = zmq.socket('pub');
+    // TODO onConnect?
+    /*setTimeout(() => {
+      self._sock.on('disconnect', function () {
+        console.log('closed')
+        self._connect();
+      });
 
-    this._sock.connect(server);
+      self._sock.monitor(1, 0);
+    }, 0)*/
   }
 
   announce (interval = 500) {
