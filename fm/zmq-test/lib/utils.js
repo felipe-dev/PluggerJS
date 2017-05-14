@@ -8,4 +8,9 @@ function rndPort () {
   });
 }
 
+function log (...params) {
+  console.log("[" + new Date().toLocaleTimeString() + "] " + params.join(' '));
+}
+
 module.exports.rndPort = rndPort;
+module.exports.log = log;

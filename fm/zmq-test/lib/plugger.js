@@ -5,6 +5,7 @@ const uuid = require('uuid/v4');
 class Plugger {
   constructor (serverAddr) {
     this._orders = {};
+    this._id = uuid();
 
     this._requestSocket = zmq.socket('req');
 
@@ -22,7 +23,7 @@ class Plugger {
       serverSocket.connect(serverAddr);
 
       setInterval(function () {
-          serverSocket.send("tcp://127.0.0.1:" + port);
+          serverSocket.send(JSON.stringify({addr: "tcp://127.0.0.1:" + port, id: self._id}));
       }, 1000);
 
       self._requestSocket.bind(addr, function (error) {
@@ -31,7 +32,7 @@ class Plugger {
           process.exit(0);
         }
         else {
-          self._logToConsole("Server listening on port 9998");
+          self._logToConsole("Server listening on port " + port);
           self._initialized = true;
         }
       });
@@ -51,6 +52,7 @@ class Plugger {
   }
 
   _sendMessage (msg) {
+    console.log(JSON.stringify(msg))
     this._requestSocket.send(JSON.stringify(msg));
   }
 

@@ -31,7 +31,10 @@ class PTalk {
     this._sock.on('disconnect', function () {
       console.log('closed')
       self._sock.close();
-      self._initialize();
+
+      setTimeout(() => {
+        self._initialize();
+      }, 0);
     });
 
     this._sock.on('message', this._onMessage.bind(this));
